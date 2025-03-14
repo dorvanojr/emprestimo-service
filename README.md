@@ -1,4 +1,4 @@
-Sistema de Empréstimos - Empresa X
+                                          
 Este projeto é um sistema de gerenciamento de empréstimos desenvolvido para a Empresa X, uma instituição financeira inovadora que oferece soluções de crédito personalizadas para seus clientes. O sistema permite o cadastro de pessoas, a realização de empréstimos e o gerenciamento dessas operações de forma eficiente e segura.
 
 Funcionalidades
