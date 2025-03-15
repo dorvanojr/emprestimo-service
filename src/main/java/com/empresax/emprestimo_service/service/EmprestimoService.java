@@ -1,6 +1,7 @@
 package com.empresax.emprestimo_service.service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,11 @@ public class EmprestimoService {
         emprestimo.setPessoa(pessoa);
 
         return emprestimoRepository.save(emprestimo);
+    }
+    
+    
+    public List<Emprestimo> consultarEmprestimo(){
+    	return emprestimoRepository.findAll();
     }
 
     // Outros métodos CRUD

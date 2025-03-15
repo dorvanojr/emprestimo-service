@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.empresax.emprestimo_service.entity.Emprestimo;
 
-@Repository
 public interface EmprestimoRepository extends JpaRepository<Emprestimo, Long> {
 
 

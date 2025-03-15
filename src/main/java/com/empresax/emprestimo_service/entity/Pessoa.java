@@ -1,21 +1,19 @@
 package com.empresax.emprestimo_service.entity;
 
-import org.springframework.data.annotation.Id;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
 import java.time.LocalDate;
+import jakarta.persistence.*;
+
+import lombok.*;
 
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Table(name = "pessoas") // Opcional, define um nome para a tabela no banco
 public class Pessoa {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,8 +24,4 @@ public class Pessoa {
     private String tipoIdentificador;
     private Double valorMinMensal;
     private Double valorMaxEmprestimo;
-    
-    public Pessoa() {
-		// TODO Auto-generated constructor stub
-	}
 }

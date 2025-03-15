@@ -1,6 +1,7 @@
 package com.empresax.emprestimo_service.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.empresax.emprestimo_service.entity.Pessoa;
@@ -14,8 +15,9 @@ public class PessoaController {
     private PessoaService pessoaService;
 
     @PostMapping
-    public Pessoa criarPessoa(@RequestBody Pessoa pessoa) {
-        return pessoaService.criarPessoa(pessoa);
+    @ResponseBody
+    public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa pessoa) {
+        return ResponseEntity.ok(pessoaService.criarPessoa(pessoa));
     }
 
 }
