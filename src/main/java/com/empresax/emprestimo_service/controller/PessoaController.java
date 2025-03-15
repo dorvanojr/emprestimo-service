@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import com.empresax.emprestimo_service.entity.Pessoa;
 import com.empresax.emprestimo_service.service.PessoaService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/pessoas")
 public class PessoaController {
@@ -16,7 +18,7 @@ public class PessoaController {
 
     @PostMapping
     @ResponseBody
-    public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa pessoa) {
+    public ResponseEntity<Pessoa> criarPessoa(@Valid @RequestBody Pessoa pessoa) {
         return ResponseEntity.ok(pessoaService.criarPessoa(pessoa));
     }
 
