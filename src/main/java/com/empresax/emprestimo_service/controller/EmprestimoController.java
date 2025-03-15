@@ -20,8 +20,6 @@ import jakarta.validation.constraints.NotNull;
 @RestController
 @RequestMapping("/emprestimos")
 public class EmprestimoController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(EmprestimoController.class);
 
     @Autowired
     private EmprestimoService emprestimoService;
